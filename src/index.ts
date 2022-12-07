@@ -12,8 +12,7 @@ import fs from "fs";
 import { dirname } from "path";
 
 async function main() {
-  const mnemonic =
-    "leisure convince wire leave again unable embody trap switch laundry hedgehog echo";
+  const mnemonic = "";
   // const rpc = "https://rpc.uni.juno.deuslabs.fi";
   const rpc = "https://juno-testnet-rpc.polkachu.com/";
 
