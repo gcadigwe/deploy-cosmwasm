@@ -10,11 +10,9 @@ import { GasPrice } from "@cosmjs/stargate";
 import { SigningCosmWasmClient, JsonObject } from "@cosmjs/cosmwasm-stargate";
 import fs from "fs";
 import { dirname } from "path";
-import * as dotenv from 'dotenv';
-dotenv.config();
 
 async function main() {
-  const mnemonic = "vote slim pudding deal alarm toe else thank snap jeans romance prize";
+  const mnemonic = "";
   // const rpc = "https://rpc.uni.juno.deuslabs.fi";
   const rpc = "https://juno-testnet-rpc.polkachu.com/";
 
