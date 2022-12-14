@@ -14,7 +14,7 @@ import { dirname } from "path";
 async function main() {
   const mnemonic = "";
   // const rpc = "https://rpc.uni.juno.deuslabs.fi";
-  const rpc = "https://juno-testnet-rpc.polkachu.com/";
+  const rpc = "junod config node https://rpc-juno.itastakers.com:443";
 
   const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, {
     prefix: "juno",
@@ -34,7 +34,7 @@ async function main() {
 
   const balance = await client.getBalance(firstAccount.address, "ujunox");
 
-  const wasmFile = fs.readFileSync(__dirname + "/dailyrocket_ibc.wasm");
+  const wasmFile = fs.readFileSync(__dirname + "../dailyrocket_ibc.wasm");
 
   //1312
 
