@@ -10,13 +10,11 @@ import { GasPrice } from "@cosmjs/stargate";
 import { SigningCosmWasmClient, JsonObject } from "@cosmjs/cosmwasm-stargate";
 import fs from "fs";
 import { dirname } from "path";
-import * as dotenv from 'dotenv';
-dotenv.config();
 
 async function main() {
-  const mnemonic = "vote slim pudding deal alarm toe else thank snap jeans romance prize";
+  const mnemonic = "";
   // const rpc = "https://rpc.uni.juno.deuslabs.fi";
-  const rpc = "https://juno-testnet-rpc.polkachu.com/";
+  const rpc = "junod config node https://rpc-juno.itastakers.com:443";
 
   const wallet = await DirectSecp256k1HdWallet.fromMnemonic(mnemonic, {
     prefix: "juno",
@@ -36,7 +34,7 @@ async function main() {
 
   const balance = await client.getBalance(firstAccount.address, "ujunox");
 
-  const wasmFile = fs.readFileSync(__dirname + "/dailyrocket_ibc.wasm");
+  const wasmFile = fs.readFileSync(__dirname + "../dailyrocket_ibc.wasm");
 
   //1312
 
